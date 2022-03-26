@@ -1,0 +1,292 @@
+﻿
+<div class="card">
+    <div class="card-header">
+        Fashion Shop
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">eVoucher</h5>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputFromAccount"><b>Amount : </b> </label>
+                <div class="col-form-label text-c-orenge" id="txtAmt">$300</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputFromAccount"><b>Expired Date</b></label>
+                <div id="txtExpire">12-04-2022</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputToAccount"><b>Quantity</b></label>
+                <select class="form-control" id="txtQty">
+                    <option selected="" disabled="">Select One</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="inputFromAccount"><b>Type</b></label>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="row col-md-12 pl-4">
+                    <div class="col-md-6 form-check">
+                        <input class="" type="radio" name="Type" id="Radios1" value="Yes" checked>
+                        <label class="form-check-label" for="Radios1">
+                            only me usage
+                        </label>
+                    </div>
+                    <div class="col-md-6 form-check">
+                        <input class="" type="radio" name="Type" id="Radios2" value="No">
+                        <label class="form-check-label" for="Radios2">
+                            gift to others
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="onlyme">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">Name</label>
+                    <input type="text" id="txtName" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">PhoneNo</label>
+                    <input type="text" id="txtPhoneNo" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">Maximum eVoucher limit</label>
+                    <input type="text" id="txtMax" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div id="gift" class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">Name</label>
+                    <input type="text" id="txtGName" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">PhoneNo</label>
+                    <input type="text" id="txtGPhoneNo" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">GiftPerUser</label>
+                    <input type="text" id="txtGift" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="inputDescription">Maximum eVoucher limit</label>
+                    <input type="text" id="txtGMax" class="form-control">
+                </div>
+            </div>
+        </div>
+        <button id="btnSubmit" type="button" class="btn btn-primary btn-square">Sumbmit</button>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#onlyme').show();
+            $('#gift').hide();
+        })
+
+        $("input[name='Type']").change(function () {
+            TypeChanged();
+        });
+
+        function TypeChanged() {
+            var checkValue = $("input[name='Type']:checked").val();
+            if (checkValue == "Yes") {
+                $('#onlyme').show();
+                $('#gift').hide();
+            }
+            else {
+                $('#onlyme').hide();
+                $('#gift').show();
+            }
+        }
+
+        //$("#btnSubmit").click(function (e) {
+        //    e.preventDefault();
+        //    var serviceURL = '/eVoucher/Index';
+        //    var l_Amt = $("#txtAmt").val();
+        //    var l_Exp = $("#txtExpire").val();
+        //    var l_Qty = $("#txtQty").val();
+        //    var checkValue = $("input[name='Type']:checked").val();
+        //    var l_Name = $("#txtName").val();
+        //    var l_PhoneNo = $("#txtPhoneNo").val();
+        //    var l_Max = $("#txtMax").val();
+        //    var l_GName = $("#txtGName").val();
+        //    var l_GPhoneNo = $("#txtGPhoneNo").val();
+        //    var l_Gift = $("#txtGift").val();
+        //    var l_GMax = $("#txtGMax").val();
+
+        //    var _reqModel = {
+        //        Amount: l_Amt,
+        //        ExpiryDate: l_Exp,
+        //        Quantity: l_Qty,
+        //        BuyType: checkValue,
+        //        Name: l_Name,
+        //        PhoneNumber: l_PhoneNo,
+        //        MaxeVoucherlimit: l_Max
+        //    };
+
+        //    $.ajax({
+        //        type: "POST",
+        //        url: serviceURL,
+        //        reqModel: _reqModel,
+        //        contentType: "application/json; charset=utf-8",
+        //        dataType: "json",
+        //        success: successFunc,
+        //        error: errorFunc
+        //    });
+
+        //    function successFunc(data, status) {
+        //        alert(data);
+        //    }
+
+        //    function errorFunc() {
+        //        alert('error');
+        //    }
+        //});
+
+        $("#btnSubmit").click(function (e) {
+            e.preventDefault();
+            var serviceURL = '/eVoucher/Index';
+            var l_Amt = $("#txtAmt").val();
+            var l_Exp = $("#txtExpire").val();
+            var l_Qty = $("#txtQty").val();
+            var checkValue = $("input[name='Type']:checked").val();
+            var l_Name = $("#txtName").val();
+            var l_PhoneNo = $("#txtPhoneNo").val();
+            var l_Max = $("#txtMax").val();
+            var l_GName = $("#txtGName").val();
+            var l_GPhoneNo = $("#txtGPhoneNo").val();
+            var l_Gift = $("#txtGift").val();
+            var l_GMax = $("#txtGMax").val();
+
+            var _reqModel = {
+                Amount: l_Amt,
+                ExpiryDate: l_Exp,
+                Quantity: l_Qty,
+                BuyType: checkValue,
+                Name: l_Name,
+                PhoneNumber: l_PhoneNo,
+                MaxeVoucherlimit: l_Max
+            };
+
+            asyncAjax(serviceURL, { reqModel: _reqModel }).then((data) => {
+                var res = data;
+                console.log({ res });
+                
+              
+            });
+        });
+
+        $('#txtQty').change(function () {
+            var l_Qty = $('#txtQty').val();
+           
+            console.log(l_Qty);
+           var l_Amt = l_Qty * 300;
+            $('#txtAmt').text(`${l_Amt}`);
+        });
+
+        function asyncAjax(url, data) {
+            return new Promise(function (resolve, reject) {
+                //$.ajax({
+                //    url: url,
+                //    type: "POST",
+                //    dataType: "json",
+                //    data: data,
+                //    beforeSend: function () {
+                //    },
+                //    success: function (data) {
+                //        resolve(data); // Resolve promise and when success
+                //    },
+                //    error: function (xhr, exception) {
+                //        Ladda.stopAll();
+                //        if ($("#divLoading").length) {
+                //            enableDiv("#divLoading");
+                //        }
+                //        reject(error(xhr, exception)); // Reject the promise and go to catch()
+                //    }
+                //});
+
+                var params = data;
+                var antiForgeryToken = $("input[name=__RequestVerificationToken]").val();
+                $.postJson(url, params,
+                    function success(data) {
+                        resolve(data);
+                    },
+                    function error(xhr, exception) {
+                        //Ladda.stopAll();
+                        if ($("#divLoading").length) {
+                            enableDiv("#divLoading");
+                        }
+                        reject(error(xhr, exception)); // Reject the promise and go to catch()
+                    }, antiForgeryToken
+                );
+            });
+        }
+
+        jQuery.postJson = function (url, data, success, error, dataType) {
+            if (dataType === void 0) { dataType = "json"; }
+            if (typeof (data) === "object") { data = JSON.stringify(data); }
+            var ajax = {
+                url: url,
+                type: "POST",
+                //contentType: "application/json; charset=utf-8",
+                dataType: dataType,
+                data: data,
+                success: success,
+                error: error
+            };
+
+            return jQuery.ajax(ajax);
+        };
+
+        jQuery.postJson = function (url, data, success, error, antiForgeryToken, dataType) {
+            if (dataType === void 0) { dataType = "json"; }
+            //if (typeof (data) === "object") { data = JSON.stringify(data); }
+            var ajax = {
+                url: url,
+                type: "POST",
+                //contentType: "application/json; charset=utf-8",
+                dataType: dataType,
+                data: data,
+                success: success,
+                error: error
+            };
+            if (antiForgeryToken) {
+                ajax.headers = {
+                    "__RequestVerificationToken": antiForgeryToken
+                };
+            };
+
+            return jQuery.ajax(ajax);
+        };
+
+    </script>
+}
