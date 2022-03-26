@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "27059800-cff2-4f41-b1ce-9b3169f2280f",
+		"name": "eVoucherManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44300/SeteVoucherInActive",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\" : \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"eVoucherId\"  : \"17\",\r\n    \"IsActive\"  : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/SeteVoucherInActive",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"SeteVoucherInActive"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\" : \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"eVoucherId\"  : \"17\",\r\n    \"IsActive\"  : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/SeteVoucherInActive",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"SeteVoucherInActive"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 13:16:11 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":null,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":null,\"respCode\":\"000\",\"respDesp\":\"Success\"}"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:44300/CreateeVoucher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYwNzI4LCJleHAiOjE2NDgwNjQzMjgsImlhdCI6MTY0ODA2MDcyOH0.DcFwArPHzPRHlfMuZ1jWPqsd535RMLXV6ZSURPcUNyQ",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"ExpiryDate\": \"2022-03-23\",\r\n    \"Amount\": \"300\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574212\",\r\n    \"MaxeVoucherlimit\": \"5\",\r\n    \"Quantity\" :\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/CreateeVoucher",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"CreateeVoucher"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"ExpiryDate\": \"2022-03-23\",\r\n    \"Amount\": \"300\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574212\",\r\n    \"MaxeVoucherlimit\": \"1\",\r\n    \"Quantity\" :\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/CreateeVoucher",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"CreateeVoucher"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 12:27:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":null,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":null,\"respCode\":\"000\",\"respDesp\":\"Create Successfully!!\"}"
+				}
+			]
+		},
+		{
+			"name": "EditeVoucher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eVoucherId\" : \"17\",\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"Amount\": \"600\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574212\",\r\n    \"MaxeVoucherlimit\": \"1\",\r\n    \"Quantity\" :\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/EditeVoucher",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"EditeVoucher"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eVoucherId\" : \"17\",\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"Amount\": \"600\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574212\",\r\n    \"MaxeVoucherlimit\": \"1\",\r\n    \"Quantity\" :\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/EditeVoucher",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"EditeVoucher"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 13:11:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":null,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":null,\"respCode\":\"000\",\"respDesp\":\"Update Successfully!!\"}"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:44300/Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test1\",\r\n    \"password\" : \"password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/Authenticate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"Authenticate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"test1\",\r\n    \"password\" : \"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/Authenticate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"Authenticate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 18:47:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:44300/CheckOuteVoucher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"ExpiryDate\": \"2022-03-23\",\r\n    \"Amount\": \"300\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574222\",\r\n    \"MaxeVoucherlimit\": \"5\",\r\n    \"Quantity\" :\"1\",\r\n    \"PaymentMethod\" : 0,\r\n    \"CardNumber\" : \"123456789\",\r\n    \"CardholderName\" : \"Mg Mg\",\r\n    \"CVCcode\" : \"123\",\r\n    \"ExpirationDate\" : \"05/23\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/CheckOuteVoucher",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"CheckOuteVoucher"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"Title\": \"Test\",\r\n    \"Description\": \"Testing\",\r\n    \"ExpiryDate\": \"2022-03-23\",\r\n    \"Amount\": \"300\",\r\n    \"BuyType\": 0,\r\n    \"Name\": \"Phoo\",\r\n    \"PhoneNumber\": \"09459574212\",\r\n    \"MaxeVoucherlimit\": \"5\",\r\n    \"Quantity\" :\"1\",\r\n    \"PaymentMethod\" : 0,\r\n    \"CardNumber\" : \"123456789\",\r\n    \"CardholderName\" : \"Mg Mg\",\r\n    \"CVCcode\" : \"123\",\r\n    \"ExpirationDate\" : \"05/23\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/CheckOuteVoucher",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"CheckOuteVoucher"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 21:32:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":null,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":null,\"qrGenerate\":{\"base64ForQR\":\"hQVDUFYwMWEUTwhlVm91Y2hlclAIZVZvdWNoZXJhFE8IZVZvdWNoZXJQCGVWb3VjaGVyDVcLRVBaQ045MDU4Mzk=\",\"phoneNo\":null,\"promoCode\":\"EPZCN905839\",\"respCode\":\"000\",\"respDesp\":\"Success\"},\"respCode\":\"000\",\"respDesp\":\"Success\"}"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:44300/GeteVoucher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\" : \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/GeteVoucher",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"GeteVoucher"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\" : \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/GeteVoucher",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"GeteVoucher"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 21:57:51 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":false,\"qrGenerate\":null,\"lstModel\":[{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":\"Test\",\"description\":\"Testing Test1\",\"expiryDate\":null,\"image\":null,\"amount\":2000.00,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":null,\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":\"Test\",\"description\":\"Testing\",\"expiryDate\":null,\"image\":null,\"amount\":300.00,\"paymentMethod\":null,\"quantity\":\"1\",\"buyType\":0,\"name\":\"Phoo\",\"phoneNumber\":\"09459574212\",\"maxeVoucherlimit\":\"1\",\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":\"Test\",\"description\":\"Testing\",\"expiryDate\":\"2022-03-23\",\"image\":null,\"amount\":600.00,\"paymentMethod\":null,\"quantity\":\"2\",\"buyType\":0,\"name\":\"Phoo\",\"phoneNumber\":\"09459574212\",\"maxeVoucherlimit\":\"1\",\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null},{\"userId\":\"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":600.00,\"paymentMethod\":null,\"quantity\":\"2\",\"buyType\":0,\"name\":\"Phoo\",\"phoneNumber\":\"09459574212\",\"maxeVoucherlimit\":\"1\",\"giftperUserlimit\":null,\"isActive\":true,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":null,\"respDesp\":null}],\"respCode\":\"000\",\"respDesp\":\"Success\"}"
+				}
+			]
+		},
+		{
+			"name": "https://localhost:44300/VerifyPromoCode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"IsActive\": true,\r\n    \"PromoCode\": \"ZULKL288450\",\r\n    \"PhoneNumber\": \"09459574212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/VerifyPromoCode",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"VerifyPromoCode"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"IsActive\": true,\r\n    \"PromoCode\": \"ZULKL288450\",\r\n    \"PhoneNumber\": \"09459574212\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/VerifyPromoCode",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"VerifyPromoCode"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 23:21:28 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\"userId\":null,\"title\":null,\"description\":null,\"expiryDate\":null,\"image\":null,\"amount\":0,\"paymentMethod\":null,\"quantity\":null,\"buyType\":0,\"name\":null,\"phoneNumber\":null,\"maxeVoucherlimit\":0,\"giftperUserlimit\":null,\"isActive\":false,\"qrGenerate\":null,\"lstModel\":null,\"respCode\":\"000\",\"respDesp\":\"Verify Promo Code\"}"
+				},
+				{
+					"name": "AlreadyUsed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n    \"IsActive\": true,\r\n    \"PromoCode\": \"ZULKL288450\",\r\n    \"PhoneNumber\": \"09459574212\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44300/VerifyPromoCode",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44300",
+							"path": [
+								"VerifyPromoCode"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Mar 2022 23:21:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "324"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": null,\n    \"title\": null,\n    \"description\": null,\n    \"expiryDate\": null,\n    \"image\": null,\n    \"amount\": 0,\n    \"paymentMethod\": null,\n    \"quantity\": null,\n    \"buyType\": 0,\n    \"name\": null,\n    \"phoneNumber\": null,\n    \"maxeVoucherlimit\": 0,\n    \"giftperUserlimit\": null,\n    \"isActive\": false,\n    \"qrGenerate\": null,\n    \"lstModel\": null,\n    \"respCode\": \"999\",\n    \"respDesp\": \"Already Used this Promo Code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ListPurchaseHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjQ4MDYxMjUxLCJleHAiOjE2NDgxNDc2NTEsImlhdCI6MTY0ODA2MTI1MX0.HJNsKCCw-7SSXtmfWzxCf13v_QzSC4L4ZBmA6gKA894",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"94EFCA7E-F808-4B76-B7BB-08BAF64ED5F0\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44300/ListPurchaseHistory",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44300",
+					"path": [
+						"ListPurchaseHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
